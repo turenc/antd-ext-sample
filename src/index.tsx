@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Input } from "antd";
-import { Responsive, ResponsiveComponentType } from "antd-ext/src/responsive";
+import { Responsive, ResponsiveComponentType } from "@turenc/antd-ext/src/responsive";
 import "antd/dist/antd.css";
 
 const rootElement = document.getElementById("root");
