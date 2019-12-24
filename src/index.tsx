@@ -3,11 +3,14 @@ import * as ReactDOM from 'react-dom';
 import { Input } from "antd";
 import { Responsive, ResponsiveComponentType } from "@turenc/antd-ext/src/responsive";
 import "antd/dist/antd.css";
+import { BuilderLayout } from './builder';
+
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
     <>
-        <div style={{ padding: 40, backgroundColor: "#f2f2f2" }}>
+    <BuilderLayout></BuilderLayout>
+        {/* <div style={{ padding: 40, backgroundColor: "#f2f2f2" }}>
             <h1>FormEditor0</h1>
             <Responsive type={ResponsiveComponentType.FormStyle}>
                 <Input defaultValue="FormEditor 0.1" />
@@ -60,7 +63,7 @@ ReactDOM.render(
                     <Input defaultValue="DoubleColumn 1.4" />
                 </Responsive>
             </div>
-        </Responsive>
+        </Responsive> */}
     </>
     ,
     rootElement);

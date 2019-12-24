@@ -1,8 +1,9 @@
 import * as React from 'react';
 
-import { ContentComponent, DroppableComponent, DraggableComponent } from '../';
-import { IComponent } from '../../interfaces';
-import { ContentBuilderDraggableComponent } from './';
+import { IComponent } from '../../interfaces/IComponent';
+import { DroppableComponent } from '../droppable/DroppableComponent';
+import { ContentComponent } from '../content/ContentComponent';
+import { ContentBuilderDraggableComponent } from './ContentBuilderDraggableComponent';
 
 export interface IContentBuilderComponent {
   id?: string;
@@ -48,7 +49,7 @@ export class ContentBuilderComponent extends React.Component<IContentBuilderComp
   }
   public render() {
     const { components, id, onDragOver, onDragDrop, onDragEnd } = this.props;
-    let content = null;
+    let content;
     if (components) {
        content = components!.map(({ name, type, children }: IComponent, componentIndex: number) => (
         <ContentBuilderDraggableComponent

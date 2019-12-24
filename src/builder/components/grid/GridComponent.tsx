@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import { IGridItemComponent } from '../grid-item';
-
 export interface IGridComponent {
   children: React.ReactNode;
 }

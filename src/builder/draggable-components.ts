@@ -1,5 +1,6 @@
+import { IComponent } from "./interfaces/IComponent";
+import { IComponentType } from "./interfaces/IComponentType";
 
-import { IComponent, IComponentType } from './interfaces';
 
 export const DraggableComponents: IComponent[] = [
   {

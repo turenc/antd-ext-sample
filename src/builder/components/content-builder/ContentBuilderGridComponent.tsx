@@ -1,8 +1,10 @@
 import * as React from 'react';
 
-import { DroppableComponent, GridComponent, GridItemComponent  } from '../';
-import { IComponent } from '../../interfaces';
-import { ContentBuilderDraggableComponent } from './';
+import { IComponent } from '../../interfaces/IComponent';
+import { DroppableComponent } from '../droppable/DroppableComponent';
+import { ContentBuilderDraggableComponent } from './ContentBuilderDraggableComponent';
+import { GridComponent } from '../grid/GridComponent';
+import { GridItemComponent } from '../grid-item/GridItemComponent';
 
 export interface IContentBuilderGridComponent {
   id: string;

@@ -1,13 +1,15 @@
 import { fromJS } from 'immutable';
 import * as React from 'react';
-import { Button } from 'surface-base-components';
 import './builder-layout.css';
+import { Button } from 'antd';
 import { globalConfig } from "./config";
-import { ContentBuilderComponent, DraggableComponent, DroppableComponent } from './components';
 import { DraggableComponents } from './draggable-components';
-import { IComponent, IComponentType, IContent } from './interfaces';
 import reactElementToJSXString from 'react-element-to-jsx-string';
-import { IData } from './components/content-builder/ContentBuilderComponent';
+import { IData, ContentBuilderComponent } from './components/content-builder/ContentBuilderComponent';
+import { IComponent } from './interfaces/IComponent';
+import { IContent } from './interfaces/IContent';
+import { IComponentType } from './interfaces/IComponentType';
+import { DraggableComponent } from './components/draggable/DraggableComponent';
 export interface IBuilderState {
   dashboardState: IContent[];
   isDragging: boolean;
@@ -61,7 +63,7 @@ export class BuilderLayout extends React.Component {
     const { dashboardState } = this.state;
     return (
       <div className='builder'>
-        <Button label="Debug Mode" onClick={() => { globalConfig.isDebugMode = !globalConfig.isDebugMode; this.forceUpdate(); }} type={globalConfig.isDebugMode ? 'primary' : 'secondary'}>Primary</Button>
+        <Button  onClick={() => { globalConfig.isDebugMode = !globalConfig.isDebugMode; this.forceUpdate(); }} >Debug Mode</Button>
         <div className='builder-draggables'>
           {
             DraggableComponents.map(({ name, type }: IComponent, index: number) =>
@@ -142,10 +144,10 @@ export class BuilderLayout extends React.Component {
   private onDragDrop(event: React.DragEvent<HTMLDivElement>, containerId: string) {
     const name = event.dataTransfer.getData('id');
     const type = event.dataTransfer.getData('type');
-    if (type !== "Responsive") {
-      alert('Componentler responsive layoutların içine bırakılmalıdır.');
-      return;
-    }
+    // if (type !== "Responsive") {
+    //   alert('Componentler responsive layoutların içine bırakılmalıdır.');
+    //   return;
+    // }
     const newComponent: IComponent = this.generateComponent(name, type, []);
     const containerArray: string[] = containerId.split('_');
     containerArray.shift(); // ignore first param, it is string prefix
