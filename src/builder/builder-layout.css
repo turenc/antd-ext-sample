@@ -1,0 +1,28 @@
+body {
+  padding-top: 0 !important;
+}
+
+.ResponsiveDivVisible{
+  border: solid 2px black;
+  height:  max-content;
+  min-height: 100px;
+}
+.ResponsiveDivHidden{
+  height:  max-content;
+  min-height: 100px;
+}
+
+.delete_c{
+    background-color:red;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 5px;
+    float: left;
+    cursor: default;
+    height: 50px;
+    margin: 5px;
+    width: 100px;
+    text-align: center;
+    align-content: center
+}
+

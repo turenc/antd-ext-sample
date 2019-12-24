@@ -1,0 +1,8 @@
+.content {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 100%;
+  text-align: left;
+  height: 100%;
+}

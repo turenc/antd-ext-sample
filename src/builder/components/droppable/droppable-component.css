@@ -1,0 +1,11 @@
+.droppable-component {
+  background: #FFF;
+  min-height: 110px;
+  overflow: hidden;
+  width: 100%;
+  clear: both;
+  overflow: hidden;
+  padding: 5px;
+  box-sizing: border-box;
+  border: dashed 3px #666;
+}

@@ -1,0 +1,13 @@
+.draggable-component {
+  background-color: #4290f7;
+  color:#fff;
+  box-sizing: border-box;
+  float: left;
+  cursor: grab;
+  height: 50px;
+  margin: 5px;
+  width: 100px;
+  text-align: center;
+  align-content: center;
+  border-radius: 24px;
+}
